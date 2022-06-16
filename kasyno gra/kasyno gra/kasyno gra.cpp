@@ -4,17 +4,35 @@
 // ReSharper disable All
 #include <iostream>
 #include "User.h"
+#include "Walec.h"
 
 void Game()
 {
 	
 }
 
+
+
 int main()
 {
 	User user = User();
     user.SetSaldo(5000);
-    std::cout << user.GetSaldo();
+	Walec walec = Walec();
+
+
+
+    std::cout << user.GetSaldo() << "\n";
+	for (auto element : walec.getAllSymbols())
+	{
+		std::cout << element << "\n";
+	}
+
+	std::cout << "\n======\n";
+	walec.przesun(4);
+	for (auto element : walec.getAllSymbols()) {
+		std::cout << element << "\n";
+	}
+	
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

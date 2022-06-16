@@ -1,5 +1,6 @@
 #pragma once
-class User
+#include "Base.h"
+class User :private Base
 {
 private:
 	int m_saldo;
