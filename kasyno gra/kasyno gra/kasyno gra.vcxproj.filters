@@ -21,13 +21,13 @@
     <ClCompile Include="User.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Walec.cpp">
+    <ClCompile Include="Roller.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Automat.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="ZnakiEnum.cpp">
+    <ClCompile Include="SymbolEnum.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Base.cpp">
@@ -38,7 +38,7 @@
     <ClInclude Include="User.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Walec.h">
+    <ClInclude Include="Roller.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Automat.h">

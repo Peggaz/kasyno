@@ -1,0 +1,42 @@
+#pragma once
+
+
+enum Symbol
+{
+	one		= 1,
+	two		= 2,
+	three	= 3,
+	four	= 4, 
+	five	= 5,
+	six		= 6,
+	seven	= 8,
+	eight	= 7,
+	nine	= 9,
+	ten		= 10,
+	a		= 11,
+	b		= 12,
+	c		= 13,
+	d		= 14,
+	e		= 15,
+	f		= 16,
+	gf		= 17,
+	i		= 18,
+	j		= 19,
+	k		= 20,
+	m		= 21,
+	n		= 22,
+	o		= 23,
+	p		= 24,
+	r		= 25,
+	s		= 26,
+	t		= 27,
+	y		= 28,
+	aa		= 29,
+	bb		= 30,
+	cc		= 31,
+	dd		= 32,
+	ee		= 33,
+	ff		= 34,
+	gg		= 35,
+	non		= 99999999
+};

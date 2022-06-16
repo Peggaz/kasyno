@@ -4,7 +4,8 @@
 // ReSharper disable All
 #include <iostream>
 #include "User.h"
-#include "Walec.h"
+#include "Roller.h"
+#include "Automat.h"
 
 void Game()
 {
@@ -15,23 +16,12 @@ void Game()
 
 int main()
 {
-	User user = User();
-    user.SetSaldo(5000);
-	Walec walec = Walec();
-
-
-
-    std::cout << user.GetSaldo() << "\n";
-	for (auto element : walec.getAllSymbols())
-	{
-		std::cout << element << "\n";
+	User user = User(5000);
+	for (int iter = 0; iter < 10; iter++) {
+		user.Game();
+		std::cout << user.GetSaldo() << '\n';
 	}
 
-	std::cout << "\n======\n";
-	walec.przesun(4);
-	for (auto element : walec.getAllSymbols()) {
-		std::cout << element << "\n";
-	}
 	
 }
 

@@ -143,14 +143,14 @@
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="kasyno gra.cpp" />
     <ClCompile Include="User.cpp" />
-    <ClCompile Include="Walec.cpp" />
-    <ClCompile Include="ZnakiEnum.cpp" />
+    <ClCompile Include="Roller.cpp" />
+    <ClCompile Include="SymbolEnum.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automat.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="User.h" />
-    <ClInclude Include="Walec.h" />
+    <ClInclude Include="Roller.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
