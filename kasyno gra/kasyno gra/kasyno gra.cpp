@@ -3,35 +3,40 @@
 
 // ReSharper disable All
 #include <iostream>
+#include <string>
+
 #include "User.h"
 #include "Roller.h"
 #include "Automat.h"
 
-void Game()
+
+int main(int argc, char* argv[])
 {
-	
-}
-
-
-
-int main()
-{
-	User user = User(5000);
-	for (int iter = 0; iter < 10; iter++) {
-		user.Game();
-		std::cout << user.GetSaldo() << '\n';
+	int games_count = 500;
+	int start_credit = 250000;
+	std::string out_file = "wynik.txt";
+	int stawka = 100;
+	try {
+		games_count = std::stoi(argv[2]);
+		start_credit = std::stoi(argv[4]);
+		out_file = argv[6];
+	} catch (...) {
+		std::cout << "Niestety wystąpił błąd argumentów, symulacja zostanie wykonana dla domyślnych wartości";
 	}
-
+	User user = User(start_credit);
+	for (int iter = 0; iter < games_count; iter++) {
+		if ((user.GetSaldo() - stawka) < 0) {
+			break;
+		}
+		user.Game(stawka);
+		//std::cout << user.GetSaldo() << '\n';
+	}
+	std::cout << "liczba wygranych: " << user.get_report()->count_win << "\n";
+	std::cout << "liczba przegranych: " << user.get_report()->count_lost << "\n";
+	std::cout << "liczba podwonych wygranych: " << user.get_report()->count_double_win << "\n";
+	std::cout << "najwyzszy wynik: " << user.get_report()->best_win << "\n";
+	std::cout << "liczba rozegranych gier: " << user.get_report()->count_games << "\n";
+	std::cout << "saldo koncowe" << user.GetSaldo();
 	
 }
 
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
